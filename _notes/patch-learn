@@ -1,3 +1,7 @@
+---
+title: 利用patch修改依赖源码
+---
+
 ## 背景
 在用formily的ArrayTable进行二次封装时遇到一个问题：在点击表头的排序按钮后，本应触发的`onChange`事件并没有发生。
 
