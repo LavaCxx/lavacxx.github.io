@@ -16,7 +16,9 @@ Formily里有三个比较重要的概念：Form、Field和Schema。
 	- 在Schema转组件的过程中Formily会默认代理组件的`value`和`onChange`，所以要开发Formily组件时要考虑到这一点。
 ## 从一个简单的页面开始
 先从一个简单的示例开始
+
 ![[Pasted image 20241003170934.png]]
+
 ![[Pasted image 20241003171026.png]]
 
 上面的代码创建一个==“带边框的div，里面装着一个输入框和另一个带了两个输入框的容器”==的场景，从代码中我们可以得到几个结论：
@@ -26,7 +28,9 @@ Formily里有三个比较重要的概念：Form、Field和Schema。
 -  `x-component-props`中定义了组件的props，`x-decorator`定义了包装这个组件的组件。
 
 简单操作一下表单，可以发现Schema和实际的表单值的映射关系。
+
 ![[Pasted image 20241003171319.png]]
+
 ![[Drawing 2024-10-03 17.22.53.excalidraw]]
 
 如果要管理不同字段的值，schema的`type`非常关键。
@@ -44,6 +48,7 @@ Formily里有三个比较重要的概念：Form、Field和Schema。
 		type: "string",
 		"x-component": "Input",
 		"x-component-props": {
+			// onClick: `{{ (event) => { console.log(event) } }}
 		}
 	}
 // ...
