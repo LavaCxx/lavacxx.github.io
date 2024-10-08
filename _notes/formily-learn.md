@@ -48,7 +48,7 @@ Formily里有三个比较重要的概念：**Form**、**Field**和**Schema**。
 		type: "string",
 		"x-component": "Input",
 		"x-component-props": {
-			// onClick: `{{ (event) => { console.log(event) } }}
+			onClick: `{{ xxx }}`
 		}
 	}
 // ...
