@@ -31,7 +31,7 @@ Formily里有三个比较重要的概念：**Form**、**Field**和**Schema**。
 
 ![[Pasted image 20241003171319.png]]
 
-![[Drawing 2024-10-03 17.22.53.excalidraw]]
+![image](https://github.com/user-attachments/assets/015a0e94-c679-4946-b5f7-25b32587bc6b)
 
 如果要管理不同字段的值，schema的`type`非常关键。
 - 当`type`为`void`的时候，表单会忽略这一层的路径。
@@ -88,7 +88,7 @@ input: {
 ## 数据传递
 我们当时的页面有一个联动逻辑，当在顶部导航栏切换时间后，下面的各个图表都要同步更新数据，而我们的解决方式如下，不一定是最佳实践。
 
-![[Drawing 2024-10-04 14.14.09.excalidraw]]
+![image](https://github.com/user-attachments/assets/7b66b29d-b1fe-4865-a434-30ba5d0e1559)
 
 ## 组件开发流程
 Formily组件和常规的React组件差别还是挺大的，如果把`@formily/antd-v5`作为官方的推荐实践方式的话，那就不能以之前的思路来开发组件。
