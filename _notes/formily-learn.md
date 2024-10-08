@@ -18,6 +18,7 @@ Formily里有三个比较重要的概念：Form、Field和Schema。
 先从一个简单的示例开始
 ![[Pasted image 20241003170934.png]]
 ![[Pasted image 20241003171026.png]]
+
 上面的代码创建一个==“带边框的div，里面装着一个输入框和另一个带了两个输入框的容器”==的场景，从代码中我们可以得到几个结论：
 - Schema的层级结构相当于HTML中的层级结构，其中的`properties`起到了类似`children`的作用。
 -  `createForm`中可以定义表单的一些初始状态？
@@ -26,7 +27,8 @@ Formily里有三个比较重要的概念：Form、Field和Schema。
 
 简单操作一下表单，可以发现Schema和实际的表单值的映射关系。
 ![[Pasted image 20241003171319.png]]
-	![[Drawing 2024-10-03 17.22.53.excalidraw]]
+![[Drawing 2024-10-03 17.22.53.excalidraw]]
+
 如果要管理不同字段的值，schema的`type`非常关键。
 - 当`type`为`void`的时候，表单会忽略这一层的路径。
 - 当`type`为`object`的时候，该字段会成为承接子字段的对象。
@@ -42,7 +44,6 @@ Formily里有三个比较重要的概念：Form、Field和Schema。
 		type: "string",
 		"x-component": "Input",
 		"x-component-props": {
-			onClick: `{{ (event) => { console.log(event) } }}`
 		}
 	}
 // ...
