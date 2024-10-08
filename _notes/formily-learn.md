@@ -17,9 +17,11 @@ Formily里有三个比较重要的概念：**Form**、**Field**和**Schema**。
 ## 从一个简单的页面开始
 先从一个简单的示例开始
 
-![[Pasted image 20241003170934.png]]
+![Pasted image 20241003170934](https://github.com/user-attachments/assets/2446c716-535d-45ca-8ddb-5979cad54fb4)
 
-![[Pasted image 20241003171026.png]]
+
+<img width="1106" alt="Pasted image 20241003171026" src="https://github.com/user-attachments/assets/3a820226-919a-4eb2-9d3a-acb317434e6f">
+
 
 上面的代码创建一个==“带边框的div，里面装着一个输入框和另一个带了两个输入框的容器”==的场景，从代码中我们可以得到几个结论：
 - Schema的层级结构相当于HTML中的层级结构，其中的`properties`起到了类似`children`的作用。
@@ -29,7 +31,8 @@ Formily里有三个比较重要的概念：**Form**、**Field**和**Schema**。
 
 简单操作一下表单，可以发现Schema和实际的表单值的映射关系。
 
-![[Pasted image 20241003171319.png]]
+<img width="533" alt="Pasted image 20241003171319" src="https://github.com/user-attachments/assets/beb1815e-f77c-40da-a4c6-fc2b8de4893a">
+
 
 ![image](https://github.com/user-attachments/assets/015a0e94-c679-4946-b5f7-25b32587bc6b)
 
@@ -48,7 +51,7 @@ Formily里有三个比较重要的概念：**Form**、**Field**和**Schema**。
 		type: "string",
 		"x-component": "Input",
 		"x-component-props": {
-			onClick: `{{ xxx }}`
+			onClick: `\{\{ (event) => { console.log(event) } \}\}`
 		}
 	}
 // ...
@@ -76,7 +79,7 @@ input: {
 	type: "string",
 	"x-component": "Input",
 	"x-component-props": {
-		suffix: `{{ createElement(SearchOutlined) }}`
+		suffix: `\{\{ createElement(SearchOutlined) \}\}`
 	}
 }
 // ...
