@@ -44,7 +44,10 @@ Formily里有三个比较重要的概念：**Form**、**Field**和**Schema**。
 当时我们本来打算封装一个组合了Card + Tabs功能的组件，但是在Formily的机制下，字段本身不能既表示自己的值（Tabs的activeKey），也成为包含子字段的对象，所以最后打消了这种做法。
 
 ## 函数处理
-如果坚持使用JSON Schema，那往Schema里塞函数的做法就显得不那么合理了。在Schema中，Formily会把`{{}}`的字符串处理成函数，所以要转换一下写法。
+如果坚持使用JSON Schema，那往Schema里塞函数的做法就显得不那么合理了。在Schema中，Formily会把`\{\{\}\}`的字符串处理成函数，所以要转换一下写法。
+
+> 本博客特有修改，因为jekyll的编译机制问题，无法在文章中直接展示双大括号，所以都加上了转义字符。
+
 ```tsx
 // ...
 	input: {
@@ -104,7 +107,7 @@ Formily组件和常规的React组件差别还是挺大的，如果把`@formily/a
 
 ## 一些坑
 #### ReactNode转Schema
-虽然可以用`{{createElement}}`的方式传递ReactNode，但对于自定义组件来说还需要提前把组件传入scope中，对于动态的Schema来说，这难以做到按需导入。
+虽然可以用`\{\{ createElement \}\}`的方式传递ReactNode，但对于自定义组件来说还需要提前把组件传入scope中，对于动态的Schema来说，这难以做到按需导入。
 
 我当时的做法是组件内部做拦截。用`useFieldSchema`拿到Schema，然后判断对应的属性是否也是一个Schema对象，如果是则返回一个`RecursionField`来渲染Schema。
 
