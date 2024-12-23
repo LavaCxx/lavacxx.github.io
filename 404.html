@@ -9,3 +9,10 @@ id: "not-found"
   <h1>Oops, that's a 404. 🙈</h1>
   <p>Looks like this page doesn't exist. <a href="{{ site.baseurl }}/">Return home</a> to get a fresh start.</p>
 </div>
+
+<script>
+    const obj = {
+        str: "{\"isShowSign\":true,\"isShowAddSymbol\":false,\"zeroPoint\":100}"
+    }
+    alart({...JSON.parse(obj.str)}.isShowSign)
+</script>
